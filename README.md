@@ -38,7 +38,7 @@
 
 3.**Configurer la base de données:**
   .Assurez-vous d'avoir MySQL installé.
-  .Créez une base de données et configurez les paramètres de connexion dans le fichier de configuration de l'application(voir ficheir prj).
+  .Créez une base de données et configurez les paramètres de connexion dans le fichier de configuration de l'application(voir fichier prj.txt).
   .Utilisez MySQL Workbench pour modéliser et gérer la base de données.
   
 4.**Démarrez l'application**:
