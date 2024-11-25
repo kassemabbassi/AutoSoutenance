@@ -43,7 +43,7 @@
   .Lancez l'application via votre IDE.
 ## Contribution
 Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration ou souhaitez corriger un bug, n'hésitez pas à soumettre une Pull Request.
-##Auteur
+## Auteur
 Développé dans le cadre d'un projet universitaire pour les administrateurs des universités, par **Mohamed Kassem Abbassi**.
 
 
