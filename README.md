@@ -28,4 +28,3 @@ Application développée dans le cadre d'un projet de gestion pour les biblioth�
 
 ---
 
-N'hésitez pas à me dire si vous souhaitez ajouter ou modifier certains détails ! 😊
