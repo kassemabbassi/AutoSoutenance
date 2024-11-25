@@ -34,12 +34,14 @@
 1. **Clonez le dépôt** :
    ```bash
    git clone https://github.com/kassemabbassi/AutoSoutenance.git
-2.Importez le projet dans votre IDE (IntelliJ IDEA).
+2.**Importez le projet dans votre IDE (IntelliJ IDEA)**.
+
 3.**Configurer la base de données:**
   .Assurez-vous d'avoir MySQL installé.
   .Créez une base de données et configurez les paramètres de connexion dans le fichier de configuration de l'application(voir ficheir prj).
   .Utilisez MySQL Workbench pour modéliser et gérer la base de données.
-4.Démarrez l'application :
+  
+4.**Démarrez l'application**:
   .Lancez l'application via votre IDE.
 ## Contribution
 Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration ou souhaitez corriger un bug, n'hésitez pas à soumettre une Pull Request.
