@@ -24,7 +24,7 @@ Cette application de gestion de bibliothèque, développée en Java Swing, propo
 - **Interface graphique** : Java Swing
 
 ## Auteur
-Application développée dans le cadre d'un projet de gestion pour les bibliothèques. 
+Application développée dans le cadre d'un projet de gestion pour les administrateurs des universités. 
 
 ---
 
