@@ -1,0 +1,85 @@
+CREATE TABLE encadreur (
+    cin number(8) PRIMARY KEY,
+    prenom VARCHAR(20),
+    nom VARCHAR(20),
+    telephone number(8),
+    email VARCHAR(50),
+nbetudiants int 
+);
+
+
+
+
+
+CREATE TABLE etudiant (
+    cin NUMBER(8) PRIMARY KEY,
+    prenom VARCHAR(20),
+    nom VARCHAR(20),
+    telephone NUMBER(8),
+    email VARCHAR(50),
+    datesoutenance DATE,
+    cinencadreur NUMBER(8),
+	heure time,
+    CONSTRAINT fk_encadreur FOREIGN KEY (cinencadreur) REFERENCES encadreur(cin)
+);
+
+
+CREATE TABLE archiveencadreur (
+    cin decimal(8) PRIMARY KEY,
+    prenom VARCHAR(20),
+    nom VARCHAR(20),
+    telephone decimal(8),
+    email VARCHAR(50) 
+);
+
+
+
+CREATE TABLE archiveetudiant (
+    cin decimal(8) PRIMARY KEY,
+    prenom VARCHAR(20),
+    nom VARCHAR(20),
+    telephone decimal(8),
+    email VARCHAR(50),
+    datesoutenance DATE,
+    cinencadreur decimal(8),
+    CONSTRAINT fk_encadreurarchive FOREIGN KEY (cinencadreur) REFERENCES encadreur(cin)
+);
+
+CREATE TABLE jurys (
+    cinpresident decimal(8),
+    cinrapporteur decimal(8),
+    cinexaminateur decimal(8),
+    cinencadreur decimal(8),
+	nbsoutenance int,
+	prenompresidnet varchar(20),
+	nompresident varchar(20),
+	prenomrapporteur varchar(20),
+	nomrapporteur varchar(20),
+	prenomexaminateur varchar(20),
+	nomexaminateur varchar(20));
+
+CREATE TABLE soutenance (
+    codesecret DECIMAL(8),
+    cinetudiant DECIMAL(8),
+    cinencadreur DECIMAL(8),
+    datesoutenance DATE,
+    heure TIME,
+    local VARCHAR(20),
+    cinpresident DECIMAL(8),
+    note VARCHAR(20),
+    CONSTRAINT pk_codesecret_cinetudiant PRIMARY KEY (codesecret, cinetudiant),
+    CONSTRAINT fk2_etudiant FOREIGN KEY (cinetudiant) REFERENCES etudiant(cin),
+    CONSTRAINT fk2_encadreur FOREIGN KEY (cinencadreur) REFERENCES encadreur(cin)
+);
+CREATE TABLE etudiantgoupe (
+    cin1 decimal(8),
+    cin2 decimal(8),
+    cinencadreur decimal(8),
+    CONSTRAINT pkg_etudiant PRIMARY KEY (cin1, cin2),
+    CONSTRAINT fkg_encadreur FOREIGN KEY (cinencadreur) REFERENCES encadreur(cin)
+);
+
+
+
+INSERT INTO soutenance (codesecret, cinetudiant, cinencadreur, datesoutenance, heure, local, cinpresident, note) 
+VALUES (12345678, 14141414, 11111111, DATE_SUB(CURDATE(), INTERVAL 1 DAY), '09:00:00', 'Salle A', 15915919, 'En attente');
